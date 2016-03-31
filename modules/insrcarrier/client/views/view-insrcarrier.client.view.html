@@ -1,0 +1,20 @@
+<section data-ng-controller="InsrcarrierController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="carrier.name"></h1>
+		<strong><span data-ng-bind="carrier.description"></span></strong>
+		<span> Program belongs to the company - </span>
+		<strong><span data-ng-bind="carrier.company"></span></strong>
+		<br>
+		<span> Required Commission is :  </span>
+		<strong><span data-ng-bind="carrier.commission"></span></strong>
+		<strong><span> % </span></strong>
+	</div>
+	<div class="pull-right">
+		<a class="btn btn-primary" href="/#!/insrcarrier/{{carrier._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+</section>

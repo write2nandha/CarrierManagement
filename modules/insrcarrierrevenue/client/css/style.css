@@ -1,0 +1,49 @@
+/* Put your css in here */
+
+/*
+.nv-series:nth-child(1){ transform: translate(0, 0); }
+.nv-series:nth-child(2){ transform: translate(0, 20px); }
+.nv-series:nth-child(3){ transform: translate(0, 40px); }
+.nv-series:nth-child(4){ transform: translate(0, 60px); }
+.nv-series:nth-child(5){ transform: translate(0, 80px); }
+.nv-series:nth-child(6){ transform: translate(0, 100px); }
+.nv-series:nth-child(7){ transform: translate(0, 120px); }
+
+.nv-legend{ transform: translate(550px, 100px); }
+*/
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+
+/*
+.vtop{
+  //padding on parent fixes this
+}) */
+
+.vcenter{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.vbottom{
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%); 
+}
+
+.insr-header {
+    padding-bottom: 9px;
+    margin: 10px 0 10px;
+    border-bottom: 1px solid #eee;
+}

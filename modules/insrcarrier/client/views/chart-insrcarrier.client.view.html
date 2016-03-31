@@ -1,0 +1,23 @@
+<!-- Include angularjs-nvd3-directives.js in your HTML file. 
+<script src="dist/angularjs-nvd3-directives.js"></script>
+<!-- Include other dependencies for nvd3.js and d3.js
+<script src="../build/components/d3/d3.js"></script>
+<script src="../build/components/nvd3/nv.d3.js"></script>
+<link rel="stylesheet" href="path/to/nv.d3.css"/> -->
+
+<section data-ng-controller="InsrcarrierController">
+	<div>
+	<span> I am in CHART MODULE </span>
+	
+		<nvd3-pie-chart
+	    	data="exampleData"
+	        id="exampleId"
+	        width="550"
+	        height="350"
+	        color="colorFunction()"
+	        showLabels="true">
+	        <svg height="250"></svg> 
+    	</nvd3-pie-chart>
+	</div>
+</section>
+

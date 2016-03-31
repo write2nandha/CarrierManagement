@@ -1,0 +1,99 @@
+<section data-ng-controller="InsrcarrierrevenueController" data-ng-init="find()">
+	<div class="insr-header">
+        <h2>Insurance Carriers Revenue - Dashboard</h2>      
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2" style="text-align: right">
+                Choose a Quarter :
+            </div>
+            <div class="col-md-3" style="text-align: left;">            
+                <select name="quarterSelect" placeholder="Quarter" data-ng-model="myQuarter" data-ng-change = "onQuarterChange(myQuarter)" required style="width:100%">       
+                <option ng-repeat="quarter in quarters" value="{{quarter.value}}" ng-selected="{{quarter.value == myQuarter}}">
+                {{quarter.name}}
+                </option> 
+                </select>
+            </div>
+            <div class="col-md-1" style="text-align: right">
+               
+            </div>
+             <div class="col-md-2" style="text-align: right">
+                Choose a month :
+            </div>
+            <div class="col-md-3" style="text-align: left">            
+                <select name="monthSelect" placeholder="Month" data-ng-model="selectedItem" data-ng-change = "onMonthChange()" required style="width:100%">               
+                <option ng-repeat="month in months" value="{{month.value}}">
+                {{month.name}}
+                </option> 
+                </select>
+            </div>
+            <div class="col-md-1" style="text-align: right">
+               
+            </div>
+        </div>
+        <br/>
+        <div class="row">           
+            <div class="col-md-3" style="text-align: left;text-indent: 3em;">
+                <strong> Quarterly Revenue : <span data-ng-bind="quarterlyData"></span>
+                </strong>
+            </div>            
+            <div class="col-md-3">
+               
+            </div>
+            <div class="col-md-3" style="text-align: left;text-indent: 3.6em;">
+                <strong>Monthly Revenue : <span data-ng-bind="monthlyData"></span>
+                </strong>
+            </div>
+            <div class="col-md-3">
+               
+            </div>
+        </div>
+        <p></p>
+        <div class="row">         
+            <div class="col-md-6" style="position:relative">
+             <nvd3-multi-bar-chart
+                data="revenueDataforBarChart"
+                  showLegend="true"
+                  showValues="true"
+                  tooltips="true"
+                  width="550"
+                  height="450"
+                  margin="{left:90,top:60,bottom:60,right:20}"
+                  xAxisLabel="Month"
+                  yAxisLabel="Revenue"
+                  showXAxis="true"
+                  showYAxis="true"
+                  tooltipcontent="toolTipContentFunctionforBar()">                  
+                  <svg></svg>
+              </nvd3-multi-bar-chart>
+            </div> 
+            <div class="col-md-6" style="position:relative">
+                <nvd3-pie-chart
+                    data="RevenueDataForPieChart"
+                    width="450"
+                    height="450"        
+                    x="xFunction()"
+                    y="yFunction()"
+                    showLabels="true"
+                    pieLabelsOutside="false"      
+                    showValues="true"  
+                    labelType="percent"
+                    labelThreshold=".05"  
+                    useInteractiveGuideline="true"
+                    interactive="true"                                      
+                    tooltips="true"
+                    tooltipcontent="toolTipContentFunction()"     
+                    showXAxis="true"
+                    showYAxis="true"
+                    margin="{left:10,top:10,bottom:30,right:10}"            
+                    showLegend="true">
+                        <svg></svg>
+                </nvd3-pie-chart>             
+            </div>             
+        </div>
+    </div>
+  
+    <input type="hidden" ng-value="revenueDataHidden" />
+   
+</section>
