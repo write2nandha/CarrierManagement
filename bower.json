@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "~3.3.6",
-    "angular": "~1.5.0",
+    "angular": "latest",
     "angular-resource": "~1.5.0",
     "angular-mocks": "~1.5.0",
     "angular-cookies": "~1.2",
