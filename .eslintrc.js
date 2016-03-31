@@ -46,7 +46,8 @@ module.exports = {
     'quote-props': 0,
     quotes: [1, 'single'],
     'wrap-iife': [2, 'outside'],
-    'vars-on-top': 0
+    'vars-on-top': 0,
+    'no-console':0
   },
   env: {
     node: true,
