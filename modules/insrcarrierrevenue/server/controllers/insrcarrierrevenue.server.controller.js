@@ -72,7 +72,7 @@ exports.listByQuarter = function (req, res) {
 	var monthsList = req.params.monthsList;
 	var monthArray = monthsList.split(',');
 
-    InsrCarrierRevenue.find({$or: [ { "month": monthArray[0] }, { "month": monthArray[1] }, { "month": monthArray[2] } ]})
+    InsrCarrierRevenue.find({$or: [ { 'month': monthArray[0] }, { 'month': monthArray[1] }, { 'month': monthArray[2] } ]})
     .exec(function (err, carriersRevenue) {
         if (err) {
             return res.status(400).send({
