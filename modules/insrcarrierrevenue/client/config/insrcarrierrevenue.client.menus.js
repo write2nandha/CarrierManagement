@@ -21,10 +21,11 @@
     });
 
     // Add the dropdown create item
+    /*
     menuService.addSubMenuItem('topbar', 'insrcarrierrevenue', {
       title: 'Create Revenue Data',
       state: 'create-insrcarrierrevenue'
-    });
+    });*/
   }
 }());
 /*'use strict';
